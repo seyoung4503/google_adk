@@ -1,0 +1,349 @@
+{
+  "eval_set_id": "evalsetf69247",
+  "name": "evalsetf69247",
+  "description": null,
+  "eval_cases": [
+    {
+      "eval_id": "case788e54",
+      "conversation": [
+        {
+          "invocation_id": "e-c031c8c2-1de1-4c5a-beef-7bccd6585bd1",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "안녕"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Hello there! I'm your agent for all things comedy. Need a joke to brighten your day? Just say the word! 😄\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1752551775.783387
+        },
+        {
+          "invocation_id": "e-e95f786d-595e-43b7-a9db-77e83e0f42ff",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "한국어로 할 수 있어"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "물론이죠! 웃긴 이야기나 농담이 필요하세요? 😉 한국어로 준비되어 있습니다!\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1752551787.229626
+        },
+        {
+          "invocation_id": "e-a15c3c3a-00a2-4c30-9bba-3466c7230cd0",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "타노스와 나혼자산다에 관한 농담"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Okay, I've got one! Thanos decided to appear on \"나 혼자 산다,\" but after seeing his messy house, he snapped his fingers again... just to tidy up! 😂 Fresh off the press, what do you think? haha Should I search for another one?\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-823533fc-f28c-4e10-9fc5-d9d016171503",
+                "args": {
+                  "query": "타노스 나 혼자 산다 jokes"
+                },
+                "name": "get_tavily_search_results"
+              }
+            ],
+            "intermediate_responses": [
+              [
+                "joke_agent",
+                [
+                  {
+                    "video_metadata": null,
+                    "thought": null,
+                    "inline_data": null,
+                    "file_data": null,
+                    "thought_signature": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "text": "Alright, let me see what I can cook up for you... Searching the web for Thanos and \"나 혼자 산다\" jokes!\n"
+                  }
+                ]
+              ]
+            ]
+          },
+          "creation_timestamp": 1752551845.952506
+        },
+        {
+          "invocation_id": "e-34fd27eb-db66-44dc-a59d-feeeaac835f3",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "한국어로 답변 다시해줘"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "좋아요, 하나 준비했어요! 타노스가 \"나 혼자 산다\"에 출연하기로 결심했는데, 너무 엉망인 집을 보고 손가락을 다시 튕겼대요... 그냥 청소하려고! 😂 어때요, 따끈따끈한 신상 농담인데? 하하. 다른 거 찾아볼까요?\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [],
+            "intermediate_responses": []
+          },
+          "creation_timestamp": 1752551865.982911
+        },
+        {
+          "invocation_id": "e-09524c78-6e98-4b51-89cd-e6a518bfaa63",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "개발자 농담"
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Okay, I've got one brewing... Why do programmers prefer dark mode? Because light attracts bugs! 😂 Fresh off the press, what do you think? haha Should I search for another one?\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-fc7e5c75-cc48-4586-b427-7aadec294955",
+                "args": {
+                  "query": "developer jokes"
+                },
+                "name": "get_tavily_search_results"
+              }
+            ],
+            "intermediate_responses": [
+              [
+                "joke_agent",
+                [
+                  {
+                    "video_metadata": null,
+                    "thought": null,
+                    "inline_data": null,
+                    "file_data": null,
+                    "thought_signature": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "text": "Alright, let's dive into the world of developer humor! I'm firing up the search engines for some coding chuckles.\n"
+                  }
+                ]
+              ]
+            ]
+          },
+          "creation_timestamp": 1752551887.734713
+        },
+        {
+          "invocation_id": "e-c7f16a3c-920f-4634-996f-d37c573f889e",
+          "user_content": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "하나 더 "
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "video_metadata": null,
+                "thought": null,
+                "inline_data": null,
+                "file_data": null,
+                "thought_signature": null,
+                "code_execution_result": null,
+                "executable_code": null,
+                "function_call": null,
+                "function_response": null,
+                "text": "Alright, I've got another one! Why did the programmer quit his job? Because he didn't get arrays! 😂\n\nFresh off the press, what do you think? haha Should I search for another one?\n"
+              }
+            ],
+            "role": null
+          },
+          "intermediate_data": {
+            "tool_uses": [
+              {
+                "id": "adk-ec4663db-5bf1-4e2b-821a-f11a72f9dcfc",
+                "args": {
+                  "query": "developer jokes"
+                },
+                "name": "get_tavily_search_results"
+              }
+            ],
+            "intermediate_responses": [
+              [
+                "joke_agent",
+                [
+                  {
+                    "video_metadata": null,
+                    "thought": null,
+                    "inline_data": null,
+                    "file_data": null,
+                    "thought_signature": null,
+                    "code_execution_result": null,
+                    "executable_code": null,
+                    "function_call": null,
+                    "function_response": null,
+                    "text": "Alright, buckle up! Let's see what other coding comedy I can conjure up.\n"
+                  }
+                ]
+              ]
+            ]
+          },
+          "creation_timestamp": 1752551951.672656
+        }
+      ],
+      "session_input": {
+        "app_name": "multi_tool_agent",
+        "user_id": "user",
+        "state": {}
+      },
+      "creation_timestamp": 1752552023.9027278
+    }
+  ],
+  "creation_timestamp": 1752552020.241746
+}
