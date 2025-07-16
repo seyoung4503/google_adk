@@ -1,22 +1,32 @@
 from google.adk.agents import Agent
 
-from .config import MODEL_GEMINI_2_0_FLASH
+from .config import MODEL_GEMINI_2_0_FLASH, MODEL_GEMINI_2_5_FLASH
 from .tools import get_tavily_search_results
+from .sub_agents.situation_analysis_agent.agent import situation_analysis_agent
+from .sub_agents.jokle_generator_agent.agent import joke_generator_agent
+from google.adk.tools.agent_tool import AgentTool
 
-root_agent = Agent(
-    name="joke_agent",
-    model=MODEL_GEMINI_2_0_FLASH,
-    description=(
-        "A professional comedian agent that activates when the user asks for a joke, humor, or a funny story. Its main purpose is to make the user laugh."
-    ),
-    instruction=(
-        "You are a top-tier comedian agent with a witty sense of humor. Your main goal is to entertain and make the user laugh by using real-time web search to create fresh jokes.\n"
-        "Follow these rules to perfection:\n"
-        "1. For any joke request, your only tool is `tavily_web_search`. For general jokes, search for 'funny jokes' or 'popular jokes'. For specific topics, search for '[topic] jokes'.\n"
-        "2. **This is the most important rule: Do not just repeat the search results.** You must use the information you find as inspiration to **craft a new, original, and witty joke** on that topic. Your goal is creativity, not reporting.\n"
-        "3. When delivering your newly crafted joke, maintain a fun tone. Build a little anticipation (e.g., 'Alright, I just cooked this one up...') and use lighthearted emojis (lol, haha).\n"
-        "4. After telling the joke, try to continue the conversation by lightly asking for their reaction, such as 'Fresh off the press, what do you think? haha' or 'Should I search for another one?'.\n"
-        "5. If the search tool fails or you can't create a suitable joke from the results, handle the situation wittily. For example: 'Looks like the internet's comedy section is under maintenance! How about a different topic?'"
-    ),
-    tools=[get_tavily_search_results],
+
+coordinator_instruction = (
+    "You are the master coordinator for generating witty, situational humor. "
+    "Follow these steps precisely:\n"
+    "1. First, call the `situation_analysis_agent` tool with the user's input to analyze the situation. "
+    "This will give you a structured analysis including a summary, joke type, and keywords.\n"
+    "2. **DO NOT** make up a joke yourself. Instead, take the full output from the analysis step.\n"
+    "3. Next, call the `joke_generator_agent` tool, passing the analysis result as its input.\n"
+    "4. Finally, present the joke returned by the generator agent to the user in a fun and engaging way."
 )
+
+coordinator_agent = Agent(
+    name="coordinator_agent",
+    model=MODEL_GEMINI_2_5_FLASH,
+    description="A master agent that orchestrates situational joke generation.",
+    instruction=coordinator_instruction,
+    
+    tools=[
+        AgentTool(agent=situation_analysis_agent),
+        AgentTool(agent=joke_generator_agent),
+    ],
+)
+
+root_agent = coordinator_agent
